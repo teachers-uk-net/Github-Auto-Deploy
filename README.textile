@@ -1,4 +1,6 @@
-!http://logsol.github.com/Github-Auto-Deploy/images/Github-Auto-Deploy.png!
+This is a fork of the original that has been updated for python3.
+There is an additional customisation where the original fetched, this pulls.
+It serves a niche purpose that I had to deploy some code on a server on a push to a github repo.
 
 h1. What is it?
 
@@ -23,7 +25,7 @@ When someone pushes changes into Github, it sends a json file to the service hoo
 It contains information about the repository that was updated.
 
 All it really does is match the repository urls to your local repository paths in the config file, 
-move there and run "git fetch".
+move there and run "git pull origin main".  This somewhat assumes you have a main branch somewhere called origin (edit it if not)!
 
-Additionally it runs a deploy bash command that you can add to the config file optionally.
+Additionally it runs a deploy bash command that you can add to the config file optionally (e.g. chown).
 Make sure that you start the server as the user that is allowed to pull from the github repository.
